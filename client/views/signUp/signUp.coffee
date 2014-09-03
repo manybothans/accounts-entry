@@ -157,9 +157,9 @@ AccountsEntry.entrySignUpEvents = {
             if error
               console.log err
               T9NHelper.accountsError error
-            else if Session.get 'fromWhere'
-              Router.go Session.get('fromWhere')
-              Session.set 'fromWhere', undefined
+            # else if Session.get 'fromWhere'
+            #   Router.go Session.get 'fromWhere'
+            #   Session.set 'fromWhere', undefined
             else
               Router.go AccountsEntry.settings.dashboardRoute
       else
