@@ -52,6 +52,12 @@ AccountsEntry.entrySignUpEvents = {
   'submit #signUp': (event, t) ->
     event.preventDefault()
 
+    if Honeypot.isHuman('#signUp')
+      Honeypot.removeHoneypotFields '#signUp'
+    else
+      Router.go 'home'
+      return
+
     username =
       if t.find('input[name="username"]')
         t.find('input[name="username"]').value.toLowerCase()
