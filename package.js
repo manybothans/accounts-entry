@@ -8,7 +8,7 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom("METEOR@0.9.0");
 
-  api.use(['iron:router', 'mrt:accounts-t9n@0.0.13'], ['client', 'server']);
+  api.use(['iron:router', 'softwarerero:accounts-t9n@0.0.17'], ['client', 'server']);
   // CLIENT
   api.use([
     'deps',
@@ -78,7 +78,7 @@ Package.onUse(function(api) {
   api.imply('accounts-password', ['client', 'server']);
   api.export('AccountsEntry', ['client', 'server']);
   api.use('iron:router', ['client', 'server']);
-  api.use(['mrt:accounts-t9n'], ['client', 'server']);
+  api.use(['softwarerero:accounts-t9n'], ['client', 'server']);
   api.addFiles(['shared/router.coffee'], ['client', 'server']);
 
 });
